@@ -15,6 +15,7 @@ class ProfileView extends GetWidget<ProfileController> {
         var width = (sizingInformation.isDesktop) ? Get.width / 3 : Get.width;
         return Container(
           width: width,
+          height: 900,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

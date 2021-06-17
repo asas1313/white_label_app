@@ -10,6 +10,7 @@ class AdminDashboardView extends GetWidget<AdminDashboardController> {
     return Authenticated(
       role: 'admin',
       child: Container(
+        height: 300,
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           SizedBox(height: 25),
           Text('AdminDashboardView'),

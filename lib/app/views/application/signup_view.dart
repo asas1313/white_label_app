@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:spaces/spaces.dart';
 import 'styles/text_styles.dart';
 import '/app/controllers/auth_controller.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -17,7 +18,9 @@ class SignupView extends GetWidget<AuthController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
+                Space.big(),
                 Text(
                   'Sign Up',
                   style: TextStyle(
@@ -28,7 +31,7 @@ class SignupView extends GetWidget<AuthController> {
                   textAlign: textAlignment,
                 ),
                 Divider(),
-                SizedBox(height: 20),
+                Space.normal(),
                 TextFormField(
                   controller: controller.email,
                   keyboardType: TextInputType.emailAddress,
@@ -45,7 +48,7 @@ class SignupView extends GetWidget<AuthController> {
                     labelText: 'E-mail',
                   ),
                 ),
-                SizedBox(height: 20),
+                Space.normal(),
                 TextFormField(
                   controller: controller.password,
                   obscureText: true,
@@ -58,7 +61,7 @@ class SignupView extends GetWidget<AuthController> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                Space.normal(),
                 TextFormField(
                   controller: controller.passwordConfirm,
                   obscureText: true,
@@ -71,7 +74,7 @@ class SignupView extends GetWidget<AuthController> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                Space.normal(),
                 ElevatedButton(
                   onPressed: () {
                     var _error = controller.validate();
@@ -88,6 +91,7 @@ class SignupView extends GetWidget<AuthController> {
                   },
                   child: Text('Sign Up'),
                 ),
+                Space.big(),
               ],
             ),
           );

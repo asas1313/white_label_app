@@ -92,7 +92,7 @@ class AuthController extends GetxController {
     _controller.loadController(email.text);
     logedIn.value = true;
     if (goToHome) {
-      Get.toNamed(Routes.HOME);
+      Get.toNamed(Routes.APP);
     }
   }
 
@@ -102,7 +102,7 @@ class AuthController extends GetxController {
     logedIn.value = false;
     email.text = '';
     password.text = '';
-    Get.offAllNamed(Routes.HOME);
+    Get.offAllNamed(Routes.APP);
   }
 
   Future<String?> validatePassword(String password) async {

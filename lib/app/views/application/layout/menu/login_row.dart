@@ -10,12 +10,12 @@ class LoginRow extends GetWidget<AuthController> {
       SizedBox(
         width: Get.width / 8,
         child: TextFormField(
+          style: TextStyle(color: Colors.white),
           controller: controller.email,
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             labelText: 'Email',
-            border: InputBorder.none,
-            labelStyle: TextStyle(fontSize: 12),
+            labelStyle: TextStyle(fontSize: 12, color: Colors.white),
           ),
         ),
       ),
@@ -23,12 +23,12 @@ class LoginRow extends GetWidget<AuthController> {
       SizedBox(
         width: Get.width / 8,
         child: TextFormField(
+          style: TextStyle(color: Colors.white),
           controller: controller.password,
           obscureText: true,
           decoration: InputDecoration(
             labelText: 'Password',
-            border: InputBorder.none,
-            labelStyle: TextStyle(fontSize: 12),
+            labelStyle: TextStyle(fontSize: 12, color: Colors.white),
           ),
           onFieldSubmitted: (value) => controller.login(goToHome: true),
         ),
@@ -43,7 +43,7 @@ class LoginRow extends GetWidget<AuthController> {
             },
             child: Text(
               'Login',
-              style: TextStyle(fontSize: 12, color: Colors.black),
+              style: TextStyle(fontSize: 12, color: Colors.white),
             )),
       ),
       SizedBox(width: 5),
@@ -53,7 +53,7 @@ class LoginRow extends GetWidget<AuthController> {
           },
           child: Text(
             'Sign Up',
-            style: TextStyle(fontSize: 12),
+            style: TextStyle(fontSize: 12, color: Colors.white),
           )),
     ]);
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:spaces/spaces.dart';
 import '../../styles/text_styles.dart';
 import '/app/controllers/auth_controller.dart';
 import '/app/routes/app_routing.dart';
@@ -12,7 +13,7 @@ class MenuTablet extends GetWidget<AuthController> {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Container(
-        color: Color.fromRGBO(0, 0, 0, 0),
+        color: Colors.black,
         padding: const EdgeInsets.all(8),
         child: Column(
           children: [
@@ -40,11 +41,18 @@ class MenuTablet extends GetWidget<AuthController> {
                     Container(
                       width: Get.width / 2,
                       padding: EdgeInsets.only(right: 25),
-                      child: Wrap(
-                        alignment: WrapAlignment.end,
-                        direction: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          SizedBox(width: 27),
+                          Space.small(),
+                          TextButton(
+                            onPressed: () => Get.toNamed(Routes.APP),
+                            child: Text(
+                              'Application home',
+                              style: textStyleMenu,
+                            ),
+                          ),
+                          Space.small(),
                           TextButton(
                             onPressed: () => Get.toNamed(Routes.CALCULATOR),
                             child: Text(

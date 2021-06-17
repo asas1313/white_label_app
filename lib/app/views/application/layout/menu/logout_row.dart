@@ -11,12 +11,12 @@ class LogoutRow extends GetWidget<UserController> {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Row(children: [
         Obx(() => SizedBox(
-              width: Get.width / 10,
+              width: Get.width / 5,
               child: Text(
                 controller.email.isNotEmpty
                     ? controller.displayName.value
                     : 'Not connected!',
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 12, color: Colors.white),
               ),
             )),
         SizedBox(

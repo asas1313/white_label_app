@@ -23,21 +23,25 @@ class LayoutTemplate extends StatelessWidget {
         builder: (context, sizingInformation) => Scaffold(
           drawer: sizingInformation.isMobile ? NavigationDrawer() : null,
           backgroundColor: Colors.white,
-          body: Column(
-            children: <Widget>[
-              Menu(),
-              Expanded(
-                child: ScreenTypeLayout(
-                  mobile: ContentMobile(
-                    child: child,
-                  ),
-                  desktop: ContentDesktop(
-                    child: child,
+          body: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Menu(),
+                FittedBox(
+                  child: ScreenTypeLayout(
+                    mobile: ContentMobile(
+                      child: child,
+                    ),
+                    desktop: ContentDesktop(
+                      child: child,
+                    ),
                   ),
                 ),
-              ),
-              Footer(),
-            ],
+                FooterApp(),
+              ],
+            ),
           ),
         ),
       ),
