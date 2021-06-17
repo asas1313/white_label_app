@@ -11,15 +11,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  auto_size_text: ^3.0.0-nullsafety.0
+  carousel_slider: ^4.0.0-nullsafety.0
   cloud_firestore: ^1.0.6
   cupertino_icons: ^1.0.2
   firebase_auth: ^1.4.1
   firebase_core: ^1.0.4
+  flutter_linkify: ^5.0.2
   get: ^4.1.4
   google_fonts: ^2.0.0
   money_converter: ^0.0.4
   package_info_plus: ^1.0.1
   responsive_builder: ^0.4.1
+  spaces: ^0.5.0
+  url_launcher: ^6.0.6
+  url_strategy: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -27,3 +33,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/img/logo.png
+    - assets/img/linkedin_logo_white.png
+    - assets/img/background.jpg
+    - assets/img/analyzing.jpg
+    - assets/img/planning.jpg

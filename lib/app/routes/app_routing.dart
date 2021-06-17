@@ -1,11 +1,19 @@
 import 'package:get/get.dart';
+import 'package:wgite_label_app/app/views/page/pages/about_page.dart';
+import 'package:wgite_label_app/app/views/page/pages/clients_page.dart';
+import 'package:wgite_label_app/app/views/page/pages/contact_page.dart';
+import 'package:wgite_label_app/app/views/page/pages/faq_page.dart';
+import 'package:wgite_label_app/app/views/page/pages/home_page.dart';
+import 'package:wgite_label_app/app/views/page/pages/layout/page_layout.dart';
+import 'package:wgite_label_app/app/views/page/pages/projects_page.dart';
+import 'package:wgite_label_app/app/views/page/pages/services_page.dart';
 import '/app/controllers/bindings/admin_dashboard_binding.dart';
 import '/app/controllers/bindings/all_calculation_binding.dart';
 import '/app/controllers/bindings/all_users_binding.dart';
 import '/app/controllers/bindings/calculator_binding.dart';
 import '/app/controllers/bindings/profile_binding.dart';
 import '/app/views/application/calculator_view.dart';
-import '../views/page/home_view.dart';
+import '../views/application/home_view.dart';
 import '/app/views/application/admin_dashboard_view.dart';
 import '/app/views/application/layout/layout_template.dart';
 import '/app/views/application/login_view.dart';
@@ -15,7 +23,14 @@ import '/app/views/application/all_users_view.dart';
 import '/app/views/application/all_calculations_view.dart';
 
 class Routes {
-  static const HOME = '/home';
+  static const HOME = '/';
+  static const ABOUT = '/about';
+  static const SERVICES = '/services';
+  static const PROJECTS = '/projects';
+  static const CONTACTS = '/contact';
+  static const CLIENTS = '/clients';
+  static const FAQ = '/faq';
+  static const APP = '/app';
   static const SIGNUP = '/signup';
   static const LOGIN = '/login';
   static const PROFILE = '/profile';
@@ -26,9 +41,37 @@ class Routes {
 }
 
 class AppRouting {
-  static var appPages = [
+  static var allPages = [
     GetPage(
       name: Routes.HOME,
+      page: () => PageLayout(child: HomePage()),
+    ),
+    GetPage(
+      name: Routes.ABOUT,
+      page: () => PageLayout(child: AboutPage()),
+    ),
+    GetPage(
+      name: Routes.SERVICES,
+      page: () => PageLayout(child: ServicesPage()),
+    ),
+    GetPage(
+      name: Routes.PROJECTS,
+      page: () => PageLayout(child: ProjectsPage()),
+    ),
+    GetPage(
+      name: Routes.CONTACTS,
+      page: () => PageLayout(child: ContactPage()),
+    ),
+    GetPage(
+      name: Routes.CLIENTS,
+      page: () => PageLayout(child: ClientsPage()),
+    ),
+    GetPage(
+      name: Routes.FAQ,
+      page: () => PageLayout(child: FaqPage()),
+    ),
+    GetPage(
+      name: Routes.APP,
       page: () => LayoutTemplate(child: HomeView()),
     ),
     GetPage(
