@@ -17,7 +17,7 @@ class Header extends StatelessWidget {
             Row(
               children: [
                 Flexible(
-                  flex: 7,
+                  flex: 8,
                   child: MenuBrowsing(),
                 ),
                 Flexible(
