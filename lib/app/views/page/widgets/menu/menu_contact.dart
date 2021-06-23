@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/app/services/get_in_touch.dart';
 import '../../styles/styles.dart';
 import 'package:spaces/spaces.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,7 +17,7 @@ class MenuContact extends StatelessWidget {
         children: [
           MenuItem(
             child: Text(contactEmail),
-            onPressed: () => _getInTouch(),
+            onPressed: () => getInTouch(),
           ),
           Space.small(),
           MenuItem(
@@ -41,15 +42,5 @@ class MenuContact extends StatelessWidget {
     await canLaunch(linkedInAddress)
         ? await launch(linkedInAddress)
         : throw 'Could not launch $linkedInAddress';
-  }
-
-  void _getInTouch() async {
-    final Uri _emailLaunchUri = Uri(
-        scheme: 'mailto',
-        path: 'hello@praugas.eu',
-        queryParameters: {'subject': 'Message from webpage visitor'});
-    await canLaunch(_emailLaunchUri.toString())
-        ? await launch(_emailLaunchUri.toString())
-        : throw 'Could not launch $_emailLaunchUri';
   }
 }

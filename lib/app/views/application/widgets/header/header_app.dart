@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wgite_label_app/app/views/application/layout/menu/menu_tablet.dart';
-import 'package:wgite_label_app/app/views/page/widgets/menu/menu_contact.dart';
+import '/app/views/application/layout/menu/menu_tablet.dart';
+import '/app/views/page/widgets/menu/menu_contact.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'header_app_desktop.dart';

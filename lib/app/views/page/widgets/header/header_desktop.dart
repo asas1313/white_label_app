@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '/app/services/get_in_touch.dart';
 import '../../styles/images.dart';
 import '../../styles/styles.dart';
 import 'package:spaces/spaces.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HeaderDesktop extends StatelessWidget {
   @override
@@ -64,22 +64,12 @@ class HeaderDesktop extends StatelessWidget {
                 height: 60,
                 width: 150,
                 child: ElevatedButton(
-                  onPressed: () => _getInTouch(),
+                  onPressed: () => getInTouch(),
                   child: Text('Get In Touch'),
                 )),
           )
         ],
       ),
     );
-  }
-
-  void _getInTouch() async {
-    final Uri _emailLaunchUri = Uri(
-        scheme: 'mailto',
-        path: 'hello@praugas.eu',
-        queryParameters: {'subject': 'Message from webpage visitor'});
-    await canLaunch(_emailLaunchUri.toString())
-        ? await launch(_emailLaunchUri.toString())
-        : throw 'Could not launch $_emailLaunchUri';
   }
 }

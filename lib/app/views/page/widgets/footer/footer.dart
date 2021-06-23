@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
+import '/app/services/get_in_touch.dart';
 import '../../styles/colors.dart';
 import '../../styles/styles.dart';
 import 'package:spaces/spaces.dart';
@@ -53,7 +54,7 @@ class Footer extends StatelessWidget {
                 height: 60,
                 width: 150,
                 child: ElevatedButton(
-                  onPressed: () => _getInTouch(),
+                  onPressed: () => getInTouch(),
                   child: Text('Get In Touch'),
                 ))
           ],
@@ -73,7 +74,7 @@ class Footer extends StatelessWidget {
                 }
               },
               text:
-                  '©2021 by Praugas. Proudly created by https://ModernIT.space',
+                  '©2021 by ModernIT. Proudly created by https://ModernIT.space',
               style: TextStyle(color: Colors.white),
               linkStyle: TextStyle(color: Colors.lightBlue),
             ),
@@ -96,15 +97,5 @@ class Footer extends StatelessWidget {
         ? await launch(
             'https://www.linkedin.com/company/modernios-informacines-technologijos/')
         : throw 'Could not launch LinkedIn profile';
-  }
-
-  void _getInTouch() async {
-    final Uri _emailLaunchUri = Uri(
-        scheme: 'mailto',
-        path: 'hello@praugas.eu',
-        queryParameters: {'subject': 'Message from webpage visitor'});
-    await canLaunch(_emailLaunchUri.toString())
-        ? await launch(_emailLaunchUri.toString())
-        : throw 'Could not launch $_emailLaunchUri';
   }
 }

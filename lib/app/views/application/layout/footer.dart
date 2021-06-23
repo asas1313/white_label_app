@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wgite_label_app/app/views/page/widgets/footer/footer.dart';
+import '/app/views/page/widgets/footer/footer.dart';
 import '/app/controllers/app_controller.dart';
 
 class FooterApp extends GetWidget<AppController> {

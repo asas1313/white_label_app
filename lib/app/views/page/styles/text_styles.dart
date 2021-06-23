@@ -16,4 +16,4 @@ final linkedInAddress =
 final contactPhone = '+370 644 09999';
 
 final buildInformation =
-    '©2021 by Praugas. Proudly created by https://ModernIT.space';
+    '©2021 by ModernIT. Proudly created by https://ModernIT.space';

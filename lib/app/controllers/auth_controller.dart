@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wgite_label_app/app/enums/auth-result-status.dart';
-import 'package:wgite_label_app/app/services/auth-exception-handler.dart';
-import 'package:wgite_label_app/app/services/firebase-auth-helper.dart';
+import '../enums/auth-result-status.dart';
+import '../services/auth-exception-handler.dart';
+import '../services/firebase-auth-helper.dart';
 import '/app/controllers/user_controller.dart';
 import '/app/models/user_model.dart';
 import '/app/routes/app_routing.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wgite_label_app/app/views/page/styles/styles.dart';
+import '/app/views/page/styles/styles.dart';
 
 class HeaderAppMobile extends StatelessWidget {
   @override

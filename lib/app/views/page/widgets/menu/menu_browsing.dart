@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spaces/spaces.dart';
-import 'package:wgite_label_app/app/routes/app_routing.dart';
+import '/app/routes/app_routing.dart';
 
 import 'menu_item.dart';
 

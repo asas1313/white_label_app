@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wgite_label_app/app/controllers/auth_controller.dart';
-import 'package:wgite_label_app/app/views/application/widgets/authenticated.dart';
+import '/app/controllers/auth_controller.dart';
+import '/app/views/application/widgets/authenticated.dart';
 
 class HomeView extends StatelessWidget {
   @override
